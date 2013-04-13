@@ -1,0 +1,73 @@
+/*
+ Grid system based on the frameless grid.
+*/
+
+.container           { position: relative; width: 960px; padding: 0; margin: 0 auto; }
+
+.unit                { float: left; display: inline;
+                          margin-left: 10px; margin-right: 10px;}
+.unit.alpha          { margin-left: 0; }
+.unit.omega          { margin-right: 0; }
+
+.size1of12           { width: 60px; }
+.size2of12           { width: 140px; }
+.size3of12           { width: 220px; }
+.size4of12           { width: 300px; }
+.size5of12           { width: 380px; }
+.size6of12           { width: 460px; }
+.size7of12           { width: 540px; }
+.size8of12           { width: 620px; }
+.size9of12           { width: 700px; }
+.size10of12          { width: 780px; }
+.size11of12          { width: 860px; }
+.size12of12          { width: 940px; }
+
+@media only screen and (min-width: 640px) and (max-width: 959px) {
+
+  .container         { width: 640px; }
+
+  .size1of8          { width: 60px; }
+  .size2of8          { width: 140px; }
+  .size3of8          { width: 220px; }
+  .size4of8          { width: 300px; }
+  .size5of8          { width: 380px; }
+  .size6of8          { width: 460px; }
+  .size7of8          { width: 540px; }
+  .size8of8          { width: 620px; }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 639px) {
+
+  .container         { width: 480px; }
+
+  .size1of6          { width: 60px; }
+  .size2of6          { width: 140px; }
+  .size3of6          { width: 220px; }
+  .size4of6          { width: 300px; }
+  .size5of6          { width: 380px; }
+  .size6of6          { width: 460px; }
+  .size7of6          { width: 540px; }
+  .size8of6          { width: 620px; }
+
+}
+
+@media only screen and (max-width: 479px) {
+
+  .container         { width: 320px; }
+
+  .size1of4          { width: 60px; }
+  .size2of4          { width: 140px; }
+  .size3of4          { width: 220px; }
+  .size4of4          { width: 300px; }
+
+}
+
+.group:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+  }
+* html .group             { zoom: 1; } /* IE6 */
+*:first-child+html .group { zoom: 1; } /* IE7 */
